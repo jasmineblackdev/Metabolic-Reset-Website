@@ -29,11 +29,11 @@ export default function CTABanner() {
               <ArrowRight className="w-5 h-5 ml-1" />
             </Button>
             <a
-              href="tel:7049990001"
+              href="tel:9804303130"
               className="flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground font-semibold transition-colors"
             >
               <Phone className="w-5 h-5" />
-              Or Call (704) 999-0001
+              Or Call (980) 430-3130
             </a>
           </div>
         </motion.div>

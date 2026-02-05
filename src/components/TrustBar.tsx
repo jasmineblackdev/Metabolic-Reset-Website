@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { Users, Award, Star, ShieldCheck } from "lucide-react";
 
 const stats = [
-  { icon: Users, value: "500+", label: "Lives Transformed" },
-  { icon: Award, value: "15+", label: "Years Experience" },
-  { icon: Star, value: "4.9★", label: "Patient Rating" },
-  { icon: ShieldCheck, value: "100%", label: "Board Certified" },
+  { icon: Users, value: "30+", label: "Years Experience" },
+  { icon: Award, value: "AGNP-C", label: "Board Certified" },
+  { icon: Star, value: "5.0★", label: "Google Rating" },
+  { icon: ShieldCheck, value: "Faith", label: "Based Care" },
 ];
 
 export default function TrustBar() {

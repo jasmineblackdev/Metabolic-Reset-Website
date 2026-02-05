@@ -2,20 +2,21 @@ import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Youtube } from "lucide-react";
 
 const serviceLinks = [
-  { label: "Medical Weight Loss", href: "/medical-weight-loss-matthews-nc" },
+  { label: "Weight Loss Programs", href: "/medical-weight-loss-matthews-nc" },
   { label: "Metabolic Reset Program", href: "/metabolic-reset-program" },
   { label: "Chronic Disease Management", href: "/chronic-disease-management" },
-  { label: "Primary Care", href: "/" },
-  { label: "Hormone Optimization", href: "/" },
-  { label: "Nutrition Counseling", href: "/" },
+  { label: "Primary Care Services", href: "/#services" },
+  { label: "Integrative Functional Medicine", href: "/#services" },
+  { label: "Wellness & Sick Visits", href: "/#services" },
 ];
 
 const quickLinks = [
   { label: "About Us", href: "/about" },
   { label: "Our Providers", href: "/about" },
-  { label: "Patient Portal", href: "/" },
-  { label: "Insurance & Pricing", href: "/" },
-  { label: "Blog", href: "/" },
+  { label: "Dispensary", href: "https://metabolicresetclinic.com/dispensary" },
+  { label: "Telemedicine", href: "https://doxy.me/glawson" },
+  { label: "Blog", href: "https://metabolicresetclinic.com/blog" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Footer() {
@@ -31,12 +32,12 @@ export default function Footer() {
               </div>
               <div>
                 <span className="font-display text-lg leading-tight block">Metabolic Reset</span>
-                <span className="text-xs opacity-70 tracking-wide">CLINIC</span>
+                <span className="text-xs opacity-70 tracking-wide">CLINIC, LLC</span>
               </div>
             </div>
             <p className="text-sm opacity-80 leading-relaxed">
-              Science-backed medical weight loss and metabolic health solutions in Matthews, NC. 
-              Your journey to lasting health starts here.
+              Compassionate, whole-person healthcare designed to restore balance and vitality. 
+              Faith-based care with over 30 years of medical experience in Matthews, NC.
             </p>
             <div className="flex gap-3">
               <a href="#" className="w-9 h-9 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground/20 flex items-center justify-center transition-colors" aria-label="Facebook">
@@ -71,9 +72,15 @@ export default function Footer() {
             <ul className="space-y-2">
               {quickLinks.map((l) => (
                 <li key={l.label}>
-                  <Link to={l.href} className="text-sm opacity-80 hover:opacity-100 transition-opacity">
-                    {l.label}
-                  </Link>
+                  {l.href.startsWith("http") ? (
+                    <a href={l.href} target="_blank" rel="noopener noreferrer" className="text-sm opacity-80 hover:opacity-100 transition-opacity">
+                      {l.label}
+                    </a>
+                  ) : (
+                    <Link to={l.href} className="text-sm opacity-80 hover:opacity-100 transition-opacity">
+                      {l.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -85,15 +92,15 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-2 opacity-80">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                <span>123 Medical Center Dr,<br />Matthews, NC 28105</span>
+                <span>1122 Sam Newell Rd. St. 114,<br />Matthews, NC 28105</span>
               </li>
               <li className="flex items-center gap-2 opacity-80">
                 <Phone className="w-4 h-4 shrink-0" />
-                <a href="tel:7049990001" className="hover:opacity-100">(704) 999-0001</a>
+                <a href="tel:9804303130" className="hover:opacity-100">(980) 430-3130</a>
               </li>
               <li className="flex items-center gap-2 opacity-80">
                 <Mail className="w-4 h-4 shrink-0" />
-                <a href="mailto:info@metabolicreset.com" className="hover:opacity-100">info@metabolicreset.com</a>
+                <a href="mailto:contact@metabolicresetclinic.com" className="hover:opacity-100">contact@metabolicresetclinic.com</a>
               </li>
               <li className="flex items-start gap-2 opacity-80">
                 <Clock className="w-4 h-4 mt-0.5 shrink-0" />
@@ -107,10 +114,10 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-primary-foreground/10">
         <div className="container mx-auto px-4 lg:px-8 py-4 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs opacity-60">
-          <span>© {new Date().getFullYear()} Metabolic Reset Clinic. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} Metabolic Reset Clinic, LLC. All rights reserved.</span>
           <div className="flex gap-4">
-            <a href="#" className="hover:opacity-100">Privacy Policy</a>
-            <a href="#" className="hover:opacity-100">Terms of Service</a>
+            <a href="https://metabolicresetclinic.com/merchant-policies" className="hover:opacity-100">Merchant Policies</a>
+            <a href="https://metabolicresetclinic.com/legal-notice" className="hover:opacity-100">Legal Notice</a>
             <a href="#" className="hover:opacity-100">HIPAA Notice</a>
           </div>
         </div>
