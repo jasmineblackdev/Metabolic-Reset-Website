@@ -9,7 +9,7 @@ const navLinks = [
   { label: "Services", href: "/#services" },
   { label: "About Us", href: "/about" },
   { label: "Weight Loss", href: "/medical-weight-loss-matthews-nc" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Header() {
