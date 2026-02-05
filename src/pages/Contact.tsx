@@ -25,12 +25,15 @@ const contactSchema = z.object({
 type ContactForm = z.infer<typeof contactSchema>;
 
 const services = [
-  "Medical Weight Loss",
+  "Weight Loss Programs",
   "Metabolic Reset Program",
   "Chronic Disease Management",
-  "Primary Care",
-  "Hormone Optimization",
-  "Nutrition Counseling",
+  "Primary Care Services",
+  "Integrative Functional Medicine",
+  "Physical Exams",
+  "Wellness Visits",
+  "Sick Visits",
+  "Telemedicine Consultation",
   "Other / Not Sure",
 ];
 
@@ -243,21 +246,21 @@ export default function Contact() {
                       <MapPin className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                       <div>
                         <div className="font-semibold text-foreground">Address</div>
-                        <div className="text-muted-foreground">123 Medical Center Dr<br />Matthews, NC 28105</div>
+                        <div className="text-muted-foreground">1122 Sam Newell Rd. St. 114<br />Matthews, NC 28105</div>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Phone className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                       <div>
                         <div className="font-semibold text-foreground">Phone</div>
-                        <a href="tel:7049990001" className="text-primary hover:underline">(704) 999-0001</a>
+                        <a href="tel:9804303130" className="text-primary hover:underline">(980) 430-3130</a>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Mail className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                       <div>
                         <div className="font-semibold text-foreground">Email</div>
-                        <a href="mailto:info@metabolicreset.com" className="text-primary hover:underline">info@metabolicreset.com</a>
+                        <a href="mailto:contact@metabolicresetclinic.com" className="text-primary hover:underline">contact@metabolicresetclinic.com</a>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
@@ -278,7 +281,7 @@ export default function Contact() {
                 <div className="bg-card rounded-2xl border border-border overflow-hidden">
                   <iframe
                     title="Metabolic Reset Clinic Location"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52304.27454657691!2d-80.7239!3d35.1168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8856b5a5a71e785d%3A0x9a0f6f9c5e7f1234!2sMatthews%2C%20NC!5e0!3m2!1sen!2sus!4v1700000000000"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.5!2d-80.7188435!3d35.1297265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDA3JzQ3LjAiTiA4MMKwNDMnMDcuOCJX!5e0!3m2!1sen!2sus!4v1700000000000"
                     width="100%"
                     height="250"
                     style={{ border: 0 }}
@@ -295,16 +298,21 @@ export default function Contact() {
                     Prefer to Book Directly?
                   </h3>
                   <p className="text-primary-foreground/80 text-sm">
-                    Schedule your free consultation online or give us a call.
+                    Schedule your appointment online via telemedicine or give us a call.
                   </p>
-                  <Button variant="gold" size="lg" className="w-full">
-                    Book Free Consultation
-                  </Button>
                   <a
-                    href="tel:7049990001"
+                    href="https://doxy.me/glawson"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-full h-12 rounded-xl bg-gold text-gold-foreground font-bold hover:bg-gold/90 transition-colors"
+                  >
+                    Join Telemedicine Appointment
+                  </a>
+                  <a
+                    href="tel:9804303130"
                     className="block text-primary-foreground/70 hover:text-primary-foreground text-sm font-medium transition-colors"
                   >
-                    or call (704) 999-0001
+                    or call (980) 430-3130
                   </a>
                 </div>
               </div>

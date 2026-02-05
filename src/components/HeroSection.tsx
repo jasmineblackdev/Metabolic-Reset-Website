@@ -35,9 +35,9 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="font-display text-4xl sm:text-5xl lg:text-6xl text-primary-foreground leading-[1.1]"
           >
-            Medical Weight Loss{" "}
-            <em className="italic">Backed by Science</em> —{" "}
-            Personalized for You
+            Revitalize Your Health With{" "}
+            <em className="italic">Purposeful, Whole-Person</em>{" "}
+            Care
           </motion.h1>
 
           <motion.p
@@ -46,8 +46,9 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-primary-foreground/85 leading-relaxed max-w-lg"
           >
-            Board-certified physicians using evidence-based medicine to help you lose weight, 
-            reset your metabolism, and achieve lasting health transformations.
+            Compassionate, faith-based healthcare combining integrative functional medicine 
+            with over 30 years of clinical experience. Medical weight loss, chronic disease management, 
+            and whole-person wellness — personalized for you.
           </motion.p>
 
           <motion.div

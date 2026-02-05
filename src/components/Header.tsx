@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Services", href: "/#services" },
   { label: "About Us", href: "/about" },
   { label: "Weight Loss", href: "/medical-weight-loss-matthews-nc" },
+  { label: "Blog", href: "https://metabolicresetclinic.com/blog" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -47,7 +48,7 @@ export default function Header() {
                 Metabolic Reset
               </span>
               <span className="text-xs text-muted-foreground tracking-wide">
-                CLINIC
+                CLINIC, LLC
               </span>
             </div>
           </Link>
@@ -67,9 +68,9 @@ export default function Header() {
 
           {/* Desktop CTAs */}
           <div className="hidden lg:flex items-center gap-3">
-            <a href="tel:7049990001" className="flex items-center gap-2 text-sm font-semibold text-primary">
+            <a href="tel:9804303130" className="flex items-center gap-2 text-sm font-semibold text-primary">
               <Phone className="w-4 h-4" />
-              (704) 999-0001
+              (980) 430-3130
             </a>
             <Button variant="default" size="lg">
               Book Free Consult
@@ -108,11 +109,11 @@ export default function Header() {
               ))}
               <div className="flex flex-col gap-2 pt-3 border-t border-border">
                 <a
-                  href="tel:7049990001"
+                  href="tel:9804303130"
                   className="flex items-center justify-center gap-2 py-3 rounded-xl bg-accent text-accent-foreground font-semibold"
                 >
                   <Phone className="w-4 h-4" />
-                  Call (704) 999-0001
+                  Call (980) 430-3130
                 </a>
                 <Button variant="default" size="lg" className="w-full">
                   Book Free Consult

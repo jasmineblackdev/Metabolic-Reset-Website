@@ -84,8 +84,8 @@ export default function ChronicDisease() {
                   <Button variant="gold" size="xl">
                     Book Free Consultation <ArrowRight className="w-5 h-5 ml-1" />
                   </Button>
-                  <a href="tel:7049990001" className="flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground font-semibold">
-                    <Phone className="w-5 h-5" /> (704) 999-0001
+                  <a href="tel:9804303130" className="flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground font-semibold">
+                    <Phone className="w-5 h-5" /> (980) 430-3130
                   </a>
                 </div>
               </div>
@@ -102,7 +102,7 @@ export default function ChronicDisease() {
                   </ul>
                   <Button variant="default" size="lg" className="w-full">Schedule Appointment</Button>
                   <div className="flex items-center gap-2 text-xs text-muted-foreground justify-center">
-                    <MapPin className="w-3 h-3" /> 123 Medical Center Dr, Matthews NC
+                    <MapPin className="w-3 h-3" /> 1122 Sam Newell Rd. St. 114, Matthews NC
                   </div>
                 </div>
               </div>
