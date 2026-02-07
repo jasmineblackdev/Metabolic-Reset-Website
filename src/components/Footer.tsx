@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Youtube } from "lucide-react";
+import Logo from "@/components/Logo";
 
 const serviceLinks = [
   { label: "Weight Loss Programs", href: "/medical-weight-loss-matthews-nc" },
@@ -27,9 +28,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-full bg-primary-foreground/20 flex items-center justify-center">
-                <span className="font-display text-lg">M</span>
-              </div>
+              <Logo size={44} />
               <div>
                 <span className="font-display text-lg leading-tight block">Metabolic Reset</span>
                 <span className="text-xs opacity-70 tracking-wide">CLINIC, LLC</span>
