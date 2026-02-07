@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-clinic.jpg";
 import { MapPin, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   return (
@@ -57,17 +58,21 @@ export default function HeroSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-4 pt-2"
           >
-            <Button variant="gold" size="xl">
-              Book Free Consultation
-              <ArrowRight className="w-5 h-5 ml-1" />
-            </Button>
-            <Button
-              variant="outline"
-              size="xl"
-              className="border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
-            >
-              Learn How It Works
-            </Button>
+            <Link to="/contact">
+              <Button variant="gold" size="xl">
+                Book Free Consultation
+                <ArrowRight className="w-5 h-5 ml-1" />
+              </Button>
+            </Link>
+            <a href="/#process">
+              <Button
+                variant="outline"
+                size="xl"
+                className="border-primary-foreground/40 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
+              >
+                Learn How It Works
+              </Button>
+            </a>
           </motion.div>
         </div>
       </div>

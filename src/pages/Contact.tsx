@@ -13,6 +13,7 @@ import {
   CheckCircle,
   AlertCircle,
 } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be under 100 characters"),
@@ -48,6 +49,7 @@ export default function Contact() {
   const [errors, setErrors] = useState<Partial<Record<keyof ContactForm, string>>>({});
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const { toast } = useToast();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -70,11 +72,18 @@ export default function Contact() {
       return;
     }
     setSubmitting(true);
-    // Simulate submission
-    setTimeout(() => {
-      setSubmitting(false);
-      setSubmitted(true);
-    }, 1200);
+    // Build mailto link with form data
+    const subject = encodeURIComponent(`New Contact: ${result.data.service || "General Inquiry"}`);
+    const body = encodeURIComponent(
+      `Name: ${result.data.name}\nEmail: ${result.data.email}\nPhone: ${result.data.phone || "Not provided"}\nService: ${result.data.service || "Not specified"}\n\nMessage:\n${result.data.message}`
+    );
+    window.open(`mailto:contact@metabolicresetclinic.com?subject=${subject}&body=${body}`, "_self");
+    toast({
+      title: "Opening your email client...",
+      description: "Your message details have been pre-filled. Just hit send!",
+    });
+    setSubmitting(false);
+    setSubmitted(true);
   };
 
   return (
