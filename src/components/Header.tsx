@@ -72,9 +72,11 @@ export default function Header() {
               <Phone className="w-4 h-4" />
               (980) 430-3130
             </a>
-            <Button variant="default" size="lg">
-              Book Free Consult
-            </Button>
+            <Link to="/contact">
+              <Button variant="default" size="lg">
+                Book Free Consult
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile toggle */}
@@ -115,9 +117,11 @@ export default function Header() {
                   <Phone className="w-4 h-4" />
                   Call (980) 430-3130
                 </a>
-                <Button variant="default" size="lg" className="w-full">
-                  Book Free Consult
-                </Button>
+                <Link to="/contact">
+                  <Button variant="default" size="lg" className="w-full">
+                    Book Free Consult
+                  </Button>
+                </Link>
               </div>
             </div>
           </motion.div>

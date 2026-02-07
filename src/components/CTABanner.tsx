@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function CTABanner() {
   return (
@@ -24,10 +25,12 @@ export default function CTABanner() {
             can help you achieve the lasting results you deserve.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-            <Button variant="gold" size="xl">
-              Book Free Consultation
-              <ArrowRight className="w-5 h-5 ml-1" />
-            </Button>
+            <Link to="/contact">
+              <Button variant="gold" size="xl">
+                Book Free Consultation
+                <ArrowRight className="w-5 h-5 ml-1" />
+              </Button>
+            </Link>
             <a
               href="tel:9804303130"
               className="flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground font-semibold transition-colors"

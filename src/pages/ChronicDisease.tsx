@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import CTABanner from "@/components/CTABanner";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   HeartPulse,
   Check,
@@ -81,9 +82,11 @@ export default function ChronicDisease() {
                   better outcomes and fewer medications.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 pt-2">
-                  <Button variant="gold" size="xl">
-                    Book Free Consultation <ArrowRight className="w-5 h-5 ml-1" />
-                  </Button>
+                  <Link to="/contact">
+                    <Button variant="gold" size="xl">
+                      Book Free Consultation <ArrowRight className="w-5 h-5 ml-1" />
+                    </Button>
+                  </Link>
                   <a href="tel:9804303130" className="flex items-center gap-2 text-primary-foreground/80 hover:text-primary-foreground font-semibold">
                     <Phone className="w-5 h-5" /> (980) 430-3130
                   </a>
@@ -100,7 +103,7 @@ export default function ChronicDisease() {
                       </li>
                     ))}
                   </ul>
-                  <Button variant="default" size="lg" className="w-full">Schedule Appointment</Button>
+                  <Link to="/contact"><Button variant="default" size="lg" className="w-full">Schedule Appointment</Button></Link>
                   <div className="flex items-center gap-2 text-xs text-muted-foreground justify-center">
                     <MapPin className="w-3 h-3" /> 1122 Sam Newell Rd. St. 114, Matthews NC
                   </div>
